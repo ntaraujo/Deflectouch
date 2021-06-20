@@ -343,7 +343,7 @@ class DeflectouchWidget(Widget):
         # try to load the level image
         try:
             level_image = kivy.core.image.Image.load(self.app.directory + '/levels/level%02d.png' % level, keep_data=True)
-        except Exception, e:
+        except Exception as e:
             error_text = 'Unable to load Level %d!\n\nReason: %s' % (level, e)
             Popup(title='Level loading error:', content=Label(text=error_text, font_size=18), size_hint=(0.3, 0.2)).open()
             return
@@ -456,10 +456,10 @@ class Deflectouch(App):
     def build(self):
         self.icon = 'icon.png'
         # print the application informations
-        print '\nDeflectouch v%s  Copyright (C) 2012 2015  Cyril Stoller' % VERSION
-        print 'This program comes with ABSOLUTELY NO WARRANTY'
-        print 'This is free software, and you are welcome to redistribute it'
-        print 'under certain conditions; see the source code for details.\n'
+        print('\nDeflectouch v%s  Copyright (C) 2012 2015  Cyril Stoller' % VERSION)
+        print('This program comes with ABSOLUTELY NO WARRANTY')
+        print('This is free software, and you are welcome to redistribute it')
+        print('under certain conditions; see the source code for details.\n')
 
         from kivy.base import EventLoop
         EventLoop.ensure_window()

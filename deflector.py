@@ -125,7 +125,7 @@ class Deflector(Scatter):
         self.length = self.length_origin * self.scale
         try:
             self.parent.parent.stockbar.recalculate_stock()
-        except Exception, e:
+        except Exception as e:
             return
         # get the current stock from the root widget:
         current_stock = self.parent.parent.stockbar.width
