@@ -35,7 +35,7 @@
 	size: app.window.size
 
 # Stock Bar description
-<Stockbar>:
+<StockBar>:
 	source: 'graphics/deflector_blue.png'
 	allow_stretch: True
 	keep_ratio: False
@@ -44,14 +44,14 @@
     size: self.max_stock, 20
     
     Image:
-        source: 'graphics/stockbar_limiter_l.png'
+        source: 'graphics/stock_bar_limiter_l.png'
         size_hint: None, None
         size: 51, 51
         y: root.center_y - self.height/2
         right: root.x
     
     Image:
-        source: 'graphics/stockbar_limiter_r.png'
+        source: 'graphics/stock_bar_limiter_r.png'
         size_hint: None, None
         size: 51, 51
         y: root.center_y - self.height/2
@@ -145,14 +145,14 @@
 	Slider:
 	    id: music_slider
 	Widget:
-        heigth: 5
+        height: 5
     
     Label:
         text: 'Sound Volume:'
     Slider:
         id: sound_slider
 	Widget:
-        heigth: 5
+        height: 5
     
     Label:
         text: 'Bullet Speed:'
@@ -160,7 +160,7 @@
         id: speed_slider
         range: 1, 10
 	Widget:
-	    heigth: 10
+	    height: 10
 	
 	BoxLayout:
 	    spacing: 10
